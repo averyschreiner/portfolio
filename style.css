@@ -1,2 +1,7 @@
 p {color:navy;}
 h1 {color:brown;}
+.section
+{
+    font-size: 6em;
+    text-align: left;
+}
