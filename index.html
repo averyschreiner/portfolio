@@ -1,35 +1,17 @@
-<!-- Comment Example
-    when ending a multiline comment, include // before end tag 
-    so js won't try to read the comment end tag
-//-->
 <!DOCTYPE html>
 <html lang = "en"
     <head>
         <!--name of tab-->
         <title>Avery's Portfolio</title>
 
+        <!--fullpage css file-->
+        <link rel="stylesheet" type="text/css" href="fullpage.css" />
+
         <!--our css file-->
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
 
-        <!--fullPage css file-->
-        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-
-        <!--jQuery lib-->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-        <!--smooth transition animation-->
-        <script src="vendors/jquery.easings.min.js"></script>
-
-        <!--fullPage js file-->
-        <script type="text/javascript" src="jquery.fullPage.min.js"></script>
-
-        <!--initialize our fullPage plugin-->
-        <script type="text/javascript">
-            $(document).ready(function(){$('#fullpage').fullpage();});
-        </script>
     </head>
-    <body style="background-color:rgb(56, 56, 56);">
-
+    <body>
         <!--creates our "wrapper element" that contains all of the vertical sections of our website-->
         <div id="fullpage">
             <div class="section">Section 1</div>
@@ -55,5 +37,12 @@
         <p><a href="https://github.com/44349-w22/project-2-minimal-spanning-tree-p2-schreinera" 
             title="Project Repository (Github)" target="_blank">Minimal Spanning Tree Project</a></p>
             //-->
+        <!--fullpage js file-->
+        <script type="text/javascript" src="fullpage.js"></script>
+        <script type="text/javascript">
+            var myFullPage = new fullpage('#fullpage', {
+                sectionColor: ['#f2f2f2', '#4bbfc3', '#7babbe']
+            });
+        </script>        
     </body>
 </html>
