@@ -12,6 +12,13 @@
         <!--our css file-->
         <link rel="stylesheet" type="text/css" href="style.css" />
 
+        <style>
+            .section{
+                font-size: 6em;
+                text-align: center;
+            }
+        </style>
+
     </head>
     <body>
         <!--creates our "wrapper element" that contains all of the vertical sections of our website-->
@@ -48,8 +55,10 @@
         <script type="text/javascript">
             new fullpage('#fullpage', {
 	        //options here
-	        autoScrolling:true,
-	        scrollHorizontally: true
+	        autoScrolling: true,
+	        scrollHorizontally: true,
+            easing: 'easeInOutCubic',
+            sectionsColor: ['navy', 'whitesmoke', 'black']
             });
         </script>
 
