@@ -5,7 +5,9 @@
         <title>Avery's Portfolio</title>
 
         <!--fullpage css file-->
-        <link rel="stylesheet" type="text/css" href="fullpage.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css" 
+        integrity="sha512-TzpAFfzjJAI0CY7w33tQEEIflTR3zB4kaQcCXcr+V4HmoQmXSMsQpX6z+c3lNC3XV0BeXQ6ZNb5X+sKeLP3cKA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!--our css file-->
         <link rel="stylesheet" type="text/css" href="style.css" />
@@ -37,12 +39,19 @@
         <p><a href="https://github.com/44349-w22/project-2-minimal-spanning-tree-p2-schreinera" 
             title="Project Repository (Github)" target="_blank">Minimal Spanning Tree Project</a></p>
             //-->
+
         <!--fullpage js file-->
-        <script type="text/javascript" src="fullpage.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js" 
+        integrity="sha512-ojnoeSkK5NDwnuW5S0ZnddobHez8Bx1yVa3RE+Cd0fGEuY/NEd4sgVF/CJ6eDtnOeLZLbTJpNFrCkUYbHS2hRA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <script type="text/javascript">
-            var myFullPage = new fullpage('#fullpage', {
-                sectionColor: ['#f2f2f2', '#4bbfc3', '#7babbe']
+            new fullpage('#fullpage', {
+	        //options here
+	        autoScrolling:true,
+	        scrollHorizontally: true
             });
-        </script>        
+        </script>
+
     </body>
 </html>
