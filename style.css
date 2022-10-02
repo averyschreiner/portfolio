@@ -3,3 +3,8 @@
     font-size: 6em;
     text-align: left;
 }
+.column
+{
+    float: left;
+    width: 50%;
+}
