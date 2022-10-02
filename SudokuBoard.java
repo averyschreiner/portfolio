@@ -15,10 +15,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-/**
- *
- * @author nathan
- */
 public class SudokuBoard
 {
     private final int[][] board;
@@ -189,21 +185,21 @@ public class SudokuBoard
     {
         try 
         {
-        //create sudoku board 
-        SudokuBoard b = new SudokuBoard("board1.txt"); 
-        System.out.println("Unsolved Board 1:");
-        b.print();
-        b.solve();
-        System.out.println("Solved Board 1:");
-        b.print();
-        
-        //second board
-        SudokuBoard c = new SudokuBoard("board2.txt");
-        System.out.println("Unsolved Board 2:");
-        c.print();
-        c.solve();
-        System.out.println("Solved Board 2:");
-        c.print();
+            //create sudoku board 
+            SudokuBoard b = new SudokuBoard("board1.txt"); 
+            System.out.println("Unsolved Board 1:");
+            b.print();
+            b.solve();
+            System.out.println("Solved Board 1:");
+            b.print();
+            
+            //second board
+            SudokuBoard c = new SudokuBoard("board2.txt");
+            System.out.println("Unsolved Board 2:");
+            c.print();
+            c.solve();
+            System.out.println("Solved Board 2:");
+            c.print();
         }
         catch (FileNotFoundException e)
         {

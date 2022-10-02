@@ -3,12 +3,12 @@
     font-size: 6em;
     text-align: left;
 }
-.column
+.text-column
 {
     float: left;
     width: 50%;
 }
-.column1
+.img-column
 {
     float: right;
     width: 50%;
