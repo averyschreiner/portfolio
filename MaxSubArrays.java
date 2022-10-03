@@ -9,17 +9,10 @@
    I have not given my code to any other student and will not share this code
    with anyone under any circumstances.
 */
-package maxsubarrayproject;
-import java.util.Random;
-/**
- *
- * @author S538964
- */
-public class MaxSubArrayProject {
 
-    /**
-     * @param args the command line arguments
-     */
+import java.util.Random;
+
+public class MaxSubArrayProject {
     public static void main(String[] args) 
     {
         //vars, and test arrays
@@ -68,9 +61,10 @@ public class MaxSubArrayProject {
         long bsum = 0;
         long ksum = 0;
         
+        //for each length of array
         for (int i = 0; i < 10; i++)
         {
-            //100 iterations
+            //we will take the average of these 100 iterations
             for (int j = 0; j < 100; j++)
             {
                 //fill array with random ints

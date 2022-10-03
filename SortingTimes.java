@@ -9,14 +9,9 @@
    I have not given my code to any other student and will not share this code
    with anyone under any circumstances.
 */
-package sort.timing;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author nathan
- */
 public class Main {
 
      private static void swapInds(ArrayList<Integer> L, int i, int j)
@@ -28,10 +23,12 @@ public class Main {
 
     public static ArrayList<Integer> insertionSort(ArrayList<Integer> L)
     {   
+        //from left to right
         for (int i = 0; i < L.size(); i++)
         {
             int j = i;
             
+            //keep shifting our int to the left until it isn't smaller than the int to its left
             while (j > 0 && L.get(j-1) > L.get(j))
             {
                 swapInds(L, j, j-1);
@@ -55,7 +52,7 @@ public class Main {
                 }
             }
             
-            //swap elts at idx and i
+            //swap elements at idx and i
             swapInds(L, smallest, i);
         }
         return L;

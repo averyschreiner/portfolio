@@ -9,7 +9,6 @@
    I have not given my code to any other student and will not share this code
    with anyone under any circumstances.
 */
-package sudoku.solver;
 
 import java.io.File;
 import java.io.FileNotFoundException;
