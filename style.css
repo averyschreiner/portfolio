@@ -1,20 +1,18 @@
 h1
 {
     text-align: center;
-    font-size: 6em;
 }
 .section
 {
-    font-size: 6em;
-    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .left-col
 {
     float: left;
-    width: 50%;
+    width: 48%;
 }
 .right-col
 {
     float: right;
-    width: 50%;
+    width: 48%;
 }
