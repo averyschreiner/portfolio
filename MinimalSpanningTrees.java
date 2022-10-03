@@ -35,30 +35,8 @@ public class p2mst_main
         sizes.add(4000);
         sizes.add(4500);
         sizes.add(4950); //(n-1)*n /2 
-        
-        /* old output
-        for (Integer size: sizes)
-        {
-            SimpleWeightedGraph<Integer, DefaultEdge> g = new SimpleWeightedGraph(DefaultEdge.class);
-            g = gen(g, size);
-            ArrayList<DefaultEdge> p = prim(g);
-            ArrayList<DefaultEdge> k = kruskal(g);
-            double weight = 0;
-            System.out.println("Prim With " + size + " Edges");
-            for (DefaultEdge d: p)
-            {
-                weight += g.getEdgeWeight(d);
-            }
-            System.out.println("# of Picked Edges: " + p.size() + ", Total Weight: " + weight);
-            System.out.println("Kruskal With " + size + " Edges");
-            weight = 0;
-            for (DefaultEdge d: k)
-            {
-                weight += g.getEdgeWeight(d);
-            }         
-            System.out.println("# of Pricked Edges: " + k.size() + ", Total Weight: " + weight);
-            System.out.println();
-        } */
+
+        //establish our timings list
         ArrayList<Long> p_timings = new ArrayList<>();
         ArrayList<Long> k_timings = new ArrayList<>();
         for (int t = 0; t < sizes.size(); t++)
@@ -66,6 +44,8 @@ public class p2mst_main
             p_timings.add(t, 0L);
             k_timings.add(t, 0L);
         }
+
+        //timed each size of graph 100 times for more accurate output
         for (int i = 1; i <= 100; i ++)
         {
             for (int j = 0; j < sizes.size(); j++)
@@ -76,11 +56,12 @@ public class p2mst_main
 
                 //collect our timings
                 long start, end;
+                //prim
                 start = System.nanoTime();
                 ArrayList<DefaultEdge> p = prim(g);
                 end = System.nanoTime();
                 p_timings.add(j, p_timings.get(j) + (end - start));
-
+                //kruskal
                 start = System.nanoTime();
                 ArrayList<DefaultEdge> k = kruskal(g);
                 end = System.nanoTime();
@@ -99,13 +80,16 @@ public class p2mst_main
                     k_weight += g.getEdgeWeight(d);
                 }
 
+                //if prim and kruskal got different mst, print an error message
                 if (p_weight != k_weight)
                 {
-                    System.out.println("Unequal on iteration " + i + " size " + sizes.get(j) + 
+                    System.out.println("Unequal weight on iteration " + i + " size " + sizes.get(j) + 
                             ", p = " +  p_weight + ", k = " + k_weight);
                 } 
             }
         }
+
+        //timings output
         System.out.print("Size:");
         for (int i = 0; i < sizes.size(); i++)
         {
@@ -140,7 +124,7 @@ public class p2mst_main
         while (edges.size() < 99)
         {        
             //establish our variables
-            double min = 200; //our abs max weight is 100 so we chillin
+            double min = 200; //our abs max weight is 100 so 200 will do
             Integer sourceNode = -1;
             Integer targetNode = -1;
             Integer smallestSource = -1;
@@ -152,18 +136,19 @@ public class p2mst_main
                 //iter through the nodes they lead to 
                 for (DefaultEdge e: g.edgesOf(visited.get(j)))
                 {   
-                    //if we havent already chosen this edge yet
+                    //if we havent already chosen this edge as apart of our mst
                     if (!edges.contains(e))
                     {  
                         sourceNode = g.getEdgeSource(e);
                         targetNode = g.getEdgeTarget(e);
-                        
+
+                        //we cant consider an edge if it creates a loop in our mst
                         if (!(visited.contains(sourceNode) && visited.contains(targetNode)))
                         {
                             //weight of the current edge we are looking at
                             double tempWeight = g.getEdgeWeight(e);
 
-                            //if its weight is smaller
+                            //if its weight is the new smallest
                             if (tempWeight < min)
                             {
                                 smallestSource = sourceNode;
@@ -174,6 +159,7 @@ public class p2mst_main
                     }            
                 }
             }
+
             //add our new visited node to list
             //if visited already has our current "source" node, just add the "target" node instead
             if (visited.contains(smallestSource))
@@ -309,7 +295,7 @@ public class p2mst_main
         if (numEdges == 4950) //max edges, "special" case
         {
             //make a completed connect graph, a web if you will
-            //connect every node to every other node but itself
+            //connect every node to every other node but itself (no self loops)
             for (int a = 1; a <= 100; a++)
             {
                 for (int b = 1; b <= 100; b++)
@@ -336,7 +322,7 @@ public class p2mst_main
         }
         else 
         {
-            while (numEdges - 99 > 0) //subtract amount of original min edges
+            while (numEdges - 99 > 0) //subtract amount of initially added edges
             {
                 int source = random.nextInt(100) + 1;
                 int dest = random.nextInt(100) + 1;

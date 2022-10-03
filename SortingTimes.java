@@ -47,7 +47,6 @@ public class Main {
         {
             //get the index of the smallest number
             int smallest = i;
-            
             for (int j = i; j < L.size(); j++)
             {
                 if (L.get(j) < L.get(smallest))
@@ -65,13 +64,13 @@ public class Main {
     public static ArrayList<Integer> mergeSort(ArrayList<Integer> L)
     {
         //base case
-        //if size of list is 0 or 1, must be sorted, just return list
+        //if size of list is 0 or 1 just return list
         if (L.size() < 2)
         {
             return L;
         }
         
-        //break L into two "equal" parts
+        //break L into two halves
         int x = L.size()/2;
         ArrayList<Integer> firstHalf = new ArrayList<>();
         ArrayList<Integer> lastHalf = new ArrayList<>();
@@ -88,7 +87,7 @@ public class Main {
             lastHalf.add(L.get(i));
         }
         
-        //recurse until lists are of size 1 or 0 (meaning they are sorted)
+        //recurse until lists are of size 1 or 0
         ArrayList<Integer> A = mergeSort(firstHalf);
         ArrayList<Integer> B = mergeSort(lastHalf);
         
@@ -106,7 +105,7 @@ public class Main {
         //establish a new array to return
         ArrayList<Integer> C = new ArrayList<>();
         
-        //run through both lists and add the smallest elt each time
+        //run through both lists and add the smallest int between them
         while (iA < A.size() && iB < B.size())
         {
             if (A.get(iA) < B.get(iB))
@@ -122,7 +121,7 @@ public class Main {
         }
         
         //above loop will break if one list is finished, meaning we can
-        //just add the rest of the other list since it is already sorted
+        //just add the rest of the other list
         while (iA < A.size())
         {
             C.add(A.get(iA));
@@ -139,11 +138,14 @@ public class Main {
         return C;
     }
 
+    //generates our list of randome ints
     public static ArrayList<Integer> randoList(int size)
     {
         ArrayList<Integer> C = new ArrayList<>();
         for (int i=0; i<size; i++)
+        {
             C.add((int)(Math.random() * size * 2));
+        }
         return C;
     }
 
@@ -188,19 +190,18 @@ public class Main {
         }
         return avg;
     }
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        //test the sorting methods over many sizes
         int sizes[] = {1, 50, 100, 500, 1000, 5000};
         System.out.println("\tInsertion\tSelection\tMerge");
+
+        //timings output
         for (int size:sizes)
         {
-            System.out.println(size + "\t" + timeInsertion(size)
-                    + "\t" + timeSelection(size)
-                    + "\t" + timeMerge(size));
+            System.out.println(size + "\t" + timeInsertion(size) + "\t" + timeSelection(size) 
+            + "\t" + timeMerge(size));
         }
     }
     
