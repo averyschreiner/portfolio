@@ -5,14 +5,17 @@ h1
 .section
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: ivory;
 }
 .left-col
 {
     float: left;
     width: 48%;
+    text-align: center;
 }
 .right-col
 {
     float: right;
     width: 48%;
+    text-align: center;
 }
