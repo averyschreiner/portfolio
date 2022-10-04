@@ -3,10 +3,20 @@
     color: '#3f3f3f';
     text-align: center;
 }
-.h2
+.h1
 {
     color: '#3f3f3f';
     text-align: center;
+}
+.h2.a
+{
+    color: '#3f3f3f';
+    text-align: left;
+}
+.h2.b
+{
+    color: '#3f3f3f';
+    text-align: right;
 }
 .section
 {
