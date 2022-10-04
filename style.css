@@ -1,11 +1,16 @@
-h1
+.body
 {
+    color: '#3f3f3f';
+    text-align: center;
+}
+.h2
+{
+    color: '#3f3f3f';
     text-align: center;
 }
 .section
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: '#3f3f3f'
 }
 .left-col
 {
