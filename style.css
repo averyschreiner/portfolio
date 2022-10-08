@@ -1,12 +1,20 @@
-.body
-{
-    color: '#3f3f3f';
-    text-align: center;
-}
 .section
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.h1
+{
+    color: black;
+}
+
+.h2
+{
+    color: #3f3f3f;
+    text-decoration: underline;
+}
+
+/*
 .left-col
 {
     float: left;
@@ -21,3 +29,4 @@
     text-align: center;
     color: ivory;
 }
+*/
