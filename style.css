@@ -1,16 +1,16 @@
-/*body{
+body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1{
     text-align: center; 
     vertical-align: text-top;
-    size: 10em;
+    padding-top: 10%;
+    size: 20em;
 }
 
 h2{
     color: #3f3f3f;
     text-decoration: underline;
-    size: 5em
+    size: 10em
 }
-*/
