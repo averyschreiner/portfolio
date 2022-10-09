@@ -1,16 +1,18 @@
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #3f3f3f;
+    color: blanchedalmond;
 }
 
 h1{
     text-align: center; 
     vertical-align: text-top;
     padding-top: 10%;
-    size: 20em;
+    size: 40em;
 }
 
 h2{
     color: #3f3f3f;
     text-decoration: underline;
-    size: 10em
+    size: 20em
 }
