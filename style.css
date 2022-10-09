@@ -16,3 +16,9 @@ h2{
     text-decoration: underline;
     size: 20em
 }
+
+hr{
+    text-align: center;
+    width: 90%;
+    color: whitesmoke;
+}
