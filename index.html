@@ -52,7 +52,9 @@
                     <p>
                         This project dives into two different approaches in finding the minimal spanning tree
                         of tree structures. I implemented both Prim's and Kruskals's alogrithms for finding the
-                        minimal spanning tree, and compared how they perfermed over various tree sizes.
+                        minimal spanning tree, and compared how they perfermed over various tree sizes. The graph 
+                        library I used for this project was <a href="https://jgrapht.org/" target="_blank"
+                         rel="noopener noreferrer">JGraphT</a>.
                     </p>
                     <br>
                     <!--explaining prim's-->
@@ -66,13 +68,13 @@
                     <p>
                         Kruskal's algorithm continuously picks the lightest edge, that hasn't already been selected, 
                         that doesn't create a cycle in our minimal spanning tree so far. Again, you repeat this process
-                        until we have chosen number of nodes - 1 edges. 
+                        until we have chosen (number of nodes - 1) edges. 
                     </p>
                     <br>
                     <!--conclusion-->
                     <p>
                         While the different approaches will perform differently depending on how you implement them, 
-                        I still think it is interesting to see how they compared as our tree size gets larger. 
+                        I still think it is interesting to see how they compare as our tree size gets larger. 
                         The sizes (number of edges in the tree) I chose were from the minimum number of edges  
                         (n-1) to the max number of edges a tree can have, in increments of ~500. All of the trees had
                         100 nodes. The results of the timings can be seen to the right.
@@ -86,6 +88,11 @@
                     </p>
                 </div>
                 <div class="col-4">
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
                     <img src="img/mst_example.png" width="100%">
                     <p>     </p>
                     <br>
@@ -121,12 +128,13 @@
                     <p>
                         Kadane's algorithm is a common solution for finding the maximum continuous subarray. Kadane's 
                         alogorithm runs through the array once, and is always comparing the current running sum to 
-                        the best (max) sum. 
+                        the best (max) sum so far. 
                     </p>
                     <br>
                     <p>
                         I tested both the brute force method and Kadane's with arrays of size 100 to 1000 in increments  
-                        of 100, and plotted the results.
+                        of 100, and plotted the results. As you can see, brute force performs worse and worse as the 
+                        array size increases, while Kadane's held up against larger array sizes.
                     </p>
                     <br>
                     <!--link-->
@@ -137,6 +145,11 @@
                     </p>
                 </div>
                 <div class="col-4">
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
                     <img src="img/msa_example.png" width="100%">
                     <p>     </p>
                     <br>
@@ -144,9 +157,6 @@
                     <br>
                     <p>     </p>
                     <img src="img/bruteVkadane.png" width="100%">
-                    <p>
-                        (x-axis: number of elements, y-axis: time in nanoseconds)
-                    </p>
                 </div>
             </div>
 
