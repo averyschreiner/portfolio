@@ -1,7 +1,7 @@
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #d1bea8;
-    color: #555555;
+    background-color: #E9DCC9;
+    color: #333333;
 }
 
 h1{
@@ -12,7 +12,7 @@ h1{
 }
 
 h2{
-    color: #555555;
+    color: #333333;
     text-decoration: underline;
     size: 20em
 }
@@ -20,5 +20,5 @@ h2{
 hr{
     text-align: center;
     width: 100%;
-    color: #555555;
+    color: #333333;
 }
