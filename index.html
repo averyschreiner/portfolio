@@ -164,15 +164,37 @@
             <br><hr><br>
 
             <!--sudoku project-->
+            <h2>Sudoku Solver</h2>
+            <br>
+            <p>
+                The sudoku solver was a project that I found really interesting. Given a semi-empty "sudoku board", 
+                this program could figure out the correct solution for the board. My approach to this solution was 
+                somewhat brute force, and solved it in a recursive fashion. For each empty square (which held a '0'),
+                I tried out every number (1-9) that wasn't already in the row, column, or box we were in, until solved.
+                If a number fit (temporarily) we made our way to the next empty square and repeated the process until 
+                our chosen numbers don't fit into a solvable outcome. Once we realize our number choices from earlier 
+                won't result in solving the board, we jump back to the "problem square" and try the next number.
+            </p>
+            <br>
+            <p>
+                If you are interested in seeing how I chose to implement this project, feel free to take a look
+                at the <a href="https://github.com/averyschreiner/portfolio/blob/main/SudokuBoard.java" 
+                target="_blank" rel="noopener noreferrer">souce code</a>.
+            </p>
+            <br>
             <div class="row justify-content-around">
                 <div class="col-4">
-                    <h2>Sudoku Solver</h2>
-                    <p>Project discription</p>
+                    <img src="img/unsBoard1.png" width="100%">
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
+                    <img src="img/unsBoard2.png" width="100%">
                 </div>
                 <div class="col-4">
-                    <img src="img/unsBoard1.png" width="100%">
                     <img src="img/solvedBoard1.png" width="100%">
-                    <img src="img/unsBoard2.png" width="100%">
+                    <p>     </p>
+                    <br>
+                    <p>     </p>
                     <img src="img/solvedBoard2.png" width="100%">
                 </div>
             </div>
