@@ -24,17 +24,16 @@
                 <div class="col-4">
                     <h2>About Me</h2>
                     <p>
-                        Currently, I am attending Northwest Missouri State University studying Computer Science. 
+                        Currently, I am  studying Computer Science at Northwest Missouri State University. 
                         This is my third year at Northwest, and I am becoming more and more excited to join the 
                         software/technology industry after graduation. My hometown is Brookfield, Missouri, a small 
-                        town in North Central Missouri. In my free time, I often find myself simply being around my 
+                        town in North Central Missouri. In my free time, I often find myself being around my 
                         close friends, playing chess, or going to the gym. 
-                        
                     </p>
                 </div>
                 <div class="col-4">
                     <h2>Contact</h2>
-                    <p><a href="mailto:schreineravery@gmail.com">schreineravery@gmail.com</a></p>
+                    <p><a href="mailto:schreineravery@gmail.com" target="_blank" rel="noopener noreferrer">schreineravery@gmail.com</a></p>
                     <p><a href="https://www.linkedin.com/in/avery-schreiner-84978224b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                     <p>660 - 229 - 1915</p>
                     <!--maybe include a nice picture of self here-->
@@ -48,7 +47,40 @@
             <div class="row justify-content-around">
                 <div class="col-4">
                     <h2>Minimal Spanning Tree Project</h2>
-                    <p>Project discription</p>
+                    <!--general project description-->
+                    <p>
+                        This project dives into two different approaches in finding the minimal spanning tree
+                        of tree structures. I implemented both Prim's and Kruskals's alogrithms for finding the
+                        minimal spanning tree, and compared how they perfermed over various tree sizes.
+                    </p>
+                    <br>
+                    <!--explaining prim's-->
+                    <p>
+                        In general, Prim's approach is to first pick a node in our tree at random. Once we have an 
+                        initial node, we repeatedly pick the lightest edge that connects a node we have visited to 
+                        a node we have not, until our number of edges = number of nodes - 1.
+                    </p>
+                    <br>
+                    <!--explaining kruskal's-->
+                    <p>
+                        Kruskal's algorithm continuously picks the lightest edge, that hasn't already been selected, 
+                        that doesn't create a cycle in our minimal spanning tree so far. 
+                    </p>
+                    <br>
+                    <!--conclusion-->
+                    <p>
+                        While the different approaches will perform differently depending on how you implement them, 
+                        I still thought it was interesting to see how they compared as our problem size got larger. 
+                        The sizes (number of edges in the tree) I chose were from 100 to 1000 in increments of 100. 
+                        The results of the timings can be seen to the right.
+                    </p>
+                    <br>
+                    <!--link-->
+                    <p>
+                        If you are interested in seeing how I chose to implement this project, feel free to take a look
+                        at the <a href="https://github.com/averyschreiner/portfolio/blob/main/MinimalSpanningTrees.java" 
+                        target="_blank" rel="noopener noreferrer">souce code</a>.
+                    </p>
                 </div>
                 <div class="col-4">
                     <img src="img/mst_example.png" width="100%">
@@ -68,6 +100,7 @@
                 </div>
                 <div class="col-4">
                     <img src="img/msa_example.png" width="100%">
+                    <br>
                     <img src="img/bruteVkadane.png" width="100%">
                 </div>
             </div>
