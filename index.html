@@ -169,11 +169,12 @@
             <p>
                 The sudoku solver was a project that I found really interesting. Given a semi-empty "sudoku board", 
                 this program could figure out the correct solution for the board. My approach to this solution was 
-                somewhat brute force, and solved it in a recursive fashion. For each empty square (which held a '0'),
+                somewhat brute force, and solved it in a recursive fashion. For each empty square (which held a zero),
                 I tried out every number (1-9) that wasn't already in the row, column, or box we were in, until solved.
-                If a number fit (temporarily) we made our way to the next empty square and repeated the process until 
+                If a number wasn't already in our row, column, or box, we placed that number in the empty square 
+                (temporarily), and we made our way to the next empty square and repeated the process until 
                 our chosen numbers don't fit into a solvable outcome. Once we realize our number choices from earlier 
-                won't result in solving the board, we jump back to the "problem square" and try the next number.
+                won't result in solving the board, we jump back to the "problem square" to try the next number.
             </p>
             <br>
             <p>
@@ -206,7 +207,46 @@
             <div class="row justify-content-around">
                 <div class="col-4">
                     <h2>Timing Sorting Algorithms</h2>
-                    <p>Project discription</p>
+                    <br>
+                    <p>
+                        In this project, I implemented three different sorting methods to see how they perform against
+                        each other as the our list size increases. The methods I wanted to test were Insertion, Selection,
+                        and Merge sorts. 
+                    </p>
+                    <br>
+                    <p>
+                        Insertion sort is always compared to how we sort a deck of cards. You start with 1 card (by itself is sorted)
+                        in your left hand, and the rest in your right. 1 by 1, you select the next card in you right hand,
+                        and place it in your left hand so that it is in order, until your right hand is holding no cards.
+                    </p>
+                    <br>
+                    <p>
+                        Selection sort works by finding the smallest element in our list, and swapping it with the element in the index
+                        that is equal to the iteration - 1. In the deck of cards example, this would be finding the ace in the 
+                        unsorted stack of cards and swapping it with the card to the far left. The second time around, you would 
+                        find the 2, and swap it with the card directly right of our previous ace. You repeat this until the list
+                        is sorted.
+                    </p>
+                    <br>
+                    <p>
+                        Merge sort is where things get interesting, and goes about things in a divide and conquer fashion. 
+                        We take a list of unsorted elements and split the list straight
+                        down the middle, into two separate lists. Now, we split the two halves into halves again (now our
+                        1 list is now 4 different lists). We keep splitting our lists into half until each element is in their
+                        own list. Once each element is alone, we begin "merging" the lists. We combine all of our single element lists
+                        with another single element list (creating a bunch of lists with 2 elements each), and sort them once we add them
+                        to the new list. Then we 
+                        combine the lists of 2 into lists of 4 (get the idea?), and sort. We continue merging and sorting the 
+                        lists in this way until we have just one finally sorted list. Merge sort works well because each merge
+                        is always dealing with two fully sorted lists, making the shuffling required to create 1 combined and sorted 
+                        list much less. 
+                    </p>
+                    <br>
+                    <p>
+                        If you are interested in seeing how I chose to implement this project, feel free to take a look
+                        at the <a href="https://github.com/averyschreiner/portfolio/blob/main/SortingTimes.java" 
+                        target="_blank" rel="noopener noreferrer">souce code</a>.
+                    </p>
                 </div>
                 <div class="col-4">
                     <img src="img/SortingAlgorithms.png" width="100%">
