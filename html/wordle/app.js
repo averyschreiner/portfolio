@@ -761,17 +761,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     //green
                     if (mwIndex == cwIndex) {
-                        console.log("changing " + keyboardLetter + " to green");
                         key.style.backgroundColor = 'rgb(25, 148, 25)';
                     }
                     //yellow
                     else if (mwIndex > -1) {
-                        console.log("changing " + keyboardLetter + " to yellow");
                         key.style.backgroundColor = 'rgb(183, 183, 31)';
                     }
                     //grey
                     else {
-                        console.log("changing " + keyboardLetter + " to grey");
                         key.style.backgroundColor = 'rgb(45, 45, 45)';
                     }
                 }
