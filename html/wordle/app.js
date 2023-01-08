@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let gameOver = false;
     let currentRow = 1;
     let words = [];
+    let date = new Date();
+    let seed = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 
     generateGrid();
 
@@ -675,7 +677,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 words = words10;
                 break;
         }
-        magicWord = words[101];
+
+        // only 1 word per length per day
+        let generator = new Math.seedrandom(seed);
+        let randomNumber = generator();
+        let index = Math.ceil(randomNumber * words.length);
+        magicWord = words[index];
     }
 
     // our input from the screen keyboard
