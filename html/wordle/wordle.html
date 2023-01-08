@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="icon" href="https://cdn.dribbble.com/users/132857/screenshots/2585122/as-logo.png">
+</head>
+<body>
+    <h1 id="title">Wordle</h1>
+    <button onclick="location.href='../../index.html'" class="home-button">Home</button>
+    <div id="game"></div>
+    <div id="custom-alert"></div>
+    <div class="keyboard-container">
+        <div class="keyboard-row">
+            <button data-key="q">q</button>
+            <button data-key="w">w</button>
+            <button data-key="e">e</button>
+            <button data-key="r">r</button>
+            <button data-key="t">t</button>
+            <button data-key="y">y</button>
+            <button data-key="u">u</button>
+            <button data-key="i">i</button>
+            <button data-key="o">o</button>
+            <button data-key="p">p</button>
+        </div>
+        <div class="keyboard-row">
+            <div class="spacer-half"></div>
+            <button data-key="a">a</button>
+            <button data-key="s">s</button>
+            <button data-key="d">d</button>
+            <button data-key="f">f</button>
+            <button data-key="g">g</button>
+            <button data-key="h">h</button>
+            <button data-key="j">j</button>
+            <button data-key="k">k</button>
+            <button data-key="l">l</button>
+            <div class="spacer-half"></div>
+        </div>
+        <div class="keyboard-row">
+            <button data-key="enter" class="wide-button">Enter</button>
+            <button data-key="z">z</button>
+            <button data-key="x">x</button>
+            <button data-key="c">c</button>
+            <button data-key="v">v</button>
+            <button data-key="b">b</button>
+            <button data-key="n">n</button>
+            <button data-key="m">m</button>
+            <button data-key="del" class="wide-button">Del</button>
+        </div>
+    </div>
+    <div class="selectors-container">
+        <h1>Word Length</h1>
+        <button wl="3">3</button>
+        <button wl="4">4</button>
+        <button wl="5">5</button>
+        <button wl="6">6</button>
+        <button wl="7">7</button>
+        <button wl="8">8</button>
+        <button wl="9">9</button>
+        <button wl="10">10</button>
+    </div>
+    <div class="difficulty-container">
+        <h1>Difficulty</h1>
+        <button nr="8">Easy</button>
+        <button nr="6">Normal</button>
+        <button nr="4">Expert</button>
+    </div>
+    <a href="https://www.google.com/search?q=define+" id="define-link" target="_blank">What does this word mean?</a>
+</body>
+</html>
