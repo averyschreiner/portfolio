@@ -9,6 +9,12 @@ body {
     color: white;
     font-family: sans-serif;
 }
+p {
+    color: rgb(139, 139, 139);
+    width: 80%;
+    word-spacing: 3px;
+    line-height: 25px;
+}
 
 .row {
     display: flex;
@@ -103,7 +109,7 @@ body {
 
 .selectors-container {
     position: fixed;
-    top: 10%;
+    top: 5%;
     left: 82%;
 }
 
@@ -125,7 +131,7 @@ body {
 
 .difficulty-container {
     position: fixed;
-    top: 50%;
+    top: 35%;
     left: 82%;
 }
 

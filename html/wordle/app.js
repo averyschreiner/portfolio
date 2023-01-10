@@ -683,6 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let randomNumber = generator();
         let index = Math.ceil(randomNumber * words.length);
         magicWord = words[index];
+        console.log(magicWord);
     }
 
     // our input from the screen keyboard
